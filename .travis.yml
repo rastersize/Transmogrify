@@ -30,12 +30,8 @@ script:
   - set -o pipefail
   - xcodebuild -version
 
-  # Build and run tests
   - if [ $RUN_TESTS == "YES" ]; then
-    xcodebuild -project Transmogrify.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO test | xcpretty -c -f `xcpretty-travis-formatter`;
-    fi
-
-  # Just build
-  - if [ $RUN_TESTS == "NO" ]; then
-    xcodebuild -project Transmogrify.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty -c -f `xcpretty-travis-formatter`;
+      xcodebuild -project Transmogrify.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO test | xcpretty -c -f `xcpretty-travis-formatter`;
+    else
+      xcodebuild -project Transmogrify.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty -c -f `xcpretty-travis-formatter`;
     fi
