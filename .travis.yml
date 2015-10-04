@@ -7,8 +7,8 @@ env:
     - LANG=en_US.UTF-8
   matrix:
     # Build for iOS
-    - DESTINATION="OS=9.0,name=iPhone 6" SCHEME="Transmogrify" SDK=iphonesimulator9.0 RUN_TESTS="YES"
-    - DESTINATION="OS=8.1,name=iPad 2" SCHEME="Transmogrify" SDK=iphonesimulator9.0 RUN_TESTS="YES"
+    - DESTINATION="OS=9.0,name=iPhone 6" SCHEME="Transmogrify iOS" SDK=iphonesimulator9.0 RUN_TESTS="YES"
+    - DESTINATION="OS=8.1,name=iPad 2" SCHEME="Transmogrify iOS" SDK=iphonesimulator9.0 RUN_TESTS="YES"
 
     # Build for OS X
 #    - DESTINATION="arch=x86_64" SCHEME="Transmogrify OS X" SDK=macosx10.11 RUN_TESTS="YES"
