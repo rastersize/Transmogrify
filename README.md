@@ -1,3 +1,7 @@
+[![MIT licensed](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/rastersize/Transmogrify/blob/master/LICENSE)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Build Status](https://travis-ci.org/rastersize/Transmogrify.svg)](https://travis-ci.org/rastersize/Transmogrify)
+
 # Transmogrify a µFramework
 The _Transmogrify_ µFramework provides typesafe value conversion with Apple’s `NSValueTransformer`. Also it allows you to use closures instead of subclasses :tada:
 
