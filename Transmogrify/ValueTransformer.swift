@@ -71,19 +71,6 @@ public class ValueTransformer<A, B>: NSValueTransformer {
         return self.forwardTransformer(value: value)
     }
 
-    func test() {
-        let pathToComponentsTransformer = ValueTransformer<String, [String]>.forwardTransformer({
-            if let value = $0 {
-                return value.componentsSeparatedByString("/")
-            }
-            return nil
-        })
-
-
-        let pathComponents = pathToComponentsTransformer.transformedValue("foo/bar/baz")
-        print(pathComponents)
-    }
-
 }
 
 
