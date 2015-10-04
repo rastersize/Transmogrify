@@ -1,0 +1,42 @@
+language: objective-c
+osx_image: xcode7
+xcode_scheme: Transmorgify
+env:
+  global:
+    - LC_CTYPE=en_US.UTF-8
+    - LANG=en_US.UTF-8
+    - BUILD_CONFIGURATION="Debug"
+  matrix:
+    # Build for iOS
+    - DESTINATION="OS=9.0,name=iPhone 6" SCHEME="Transmogrify" SDK=iphonesimulator9.0 RUN_TESTS="YES"
+    - DESTINATION="OS=8.1,name=iPad 2" SCHEME="Transmogrify" SDK=iphonesimulator9.0 RUN_TESTS="YES"
+
+    # Build for OS X
+#    - DESTINATION="arch=x86_64" SCHEME="Transmogrify OS X" SDK=macosx10.11 RUN_TESTS="YES"
+
+    # Build for watchOS
+#   - DESTINATION="OS=2.0,name=Apple Watch - 42mm" SCHEME="Transmogrify watchOS" SDK=watchsimulator2.0 RUN_TESTS="NO"
+
+    # Build for tvOS
+#   - DESTINATION="OS=1.0,name=Apple TV 1080p" SCHEME="Transmogrify tvOS" SDK=appletvos9.0 RUN_TESTS="YES"
+before_install:
+  - brew update
+  - brew install carthage
+
+  - gem update xcpretty xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
+
+  - carthage bootstrap --no-build
+  - carthage build --no-skip-current --configuration "$BUILD_CONFIGURATION"
+script:
+  - set -o pipefail
+  - xcodebuild -version
+
+  # Build and run tests
+  - if [ $RUN_TESTS == "YES" ]; then
+    xcodebuild -project Transmogrify.xcproject -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration "$BUILD_CONFIGURATION" ONLY_ACTIVE_ARCH=NO test | xcpretty -c -f `xcpretty-travis-formatter`;
+    fi
+
+  # Just build
+  - if [ $RUN_TESTS == "NO" ]; then
+    xcodebuild -project Transmogrify.xcproject -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration "$BUILD_CONFIGURATION" ONLY_ACTIVE_ARCH=NO | xcpretty -c -f `xcpretty-travis-formatter`;
+    fi
