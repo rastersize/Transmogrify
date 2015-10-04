@@ -1,0 +1,11 @@
+# OS X
+.DS_Store
+
+# Xcode
+!default.xcworkspace
+*.xccheckout
+xcuserdata
+profile
+
+# Carthage
+Carthage/Build
