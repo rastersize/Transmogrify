@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C16E8CA1BC17BAE00A6B3C9 /* Transmogrify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C16E8BF1BC17BAE00A6B3C9 /* Transmogrify.framework */; };
+		9C16E8CF1BC17BAE00A6B3C9 /* TransmogrifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16E8CE1BC17BAE00A6B3C9 /* TransmogrifyTests.swift */; };
+		9C16E8DA1BC1827400A6B3C9 /* ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16E8D91BC1827400A6B3C9 /* ValueTransformer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C16E8CB1BC17BAE00A6B3C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C16E8B61BC17BAE00A6B3C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C16E8BE1BC17BAE00A6B3C9;
+			remoteInfo = Transmogrify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C16E8BF1BC17BAE00A6B3C9 /* Transmogrify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transmogrify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C16E8C41BC17BAE00A6B3C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C16E8C91BC17BAE00A6B3C9 /* TransmogrifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransmogrifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C16E8CE1BC17BAE00A6B3C9 /* TransmogrifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransmogrifyTests.swift; sourceTree = "<group>"; };
+		9C16E8D01BC17BAE00A6B3C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C16E8D91BC1827400A6B3C9 /* ValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueTransformer.swift; sourceTree = "<group>"; };
+		9C16E8DC1BC18AEB00A6B3C9 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9C16E8DE1BC18AEB00A6B3C9 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		9C16E8E01BC18AEB00A6B3C9 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		9C16E8E11BC18AEB00A6B3C9 /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
+		9C16E8E21BC18AEB00A6B3C9 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		9C16E8E31BC18AEB00A6B3C9 /* Test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
+		9C16E8E51BC18AEB00A6B3C9 /* Application.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		9C16E8E61BC18AEB00A6B3C9 /* Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
+		9C16E8E71BC18AEB00A6B3C9 /* StaticLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = StaticLibrary.xcconfig; sourceTree = "<group>"; };
+		9C16E8EB1BC18AEB00A6B3C9 /* iOS-Application.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
+		9C16E8EC1BC18AEB00A6B3C9 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
+		9C16E8ED1BC18AEB00A6B3C9 /* iOS-Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-Framework.xcconfig"; sourceTree = "<group>"; };
+		9C16E8EE1BC18AEB00A6B3C9 /* iOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		9C16E8F01BC18AEB00A6B3C9 /* Mac-Application.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-Application.xcconfig"; sourceTree = "<group>"; };
+		9C16E8F11BC18AEB00A6B3C9 /* Mac-Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-Base.xcconfig"; sourceTree = "<group>"; };
+		9C16E8F21BC18AEB00A6B3C9 /* Mac-DynamicLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-DynamicLibrary.xcconfig"; sourceTree = "<group>"; };
+		9C16E8F31BC18AEB00A6B3C9 /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
+		9C16E8F41BC18AEB00A6B3C9 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		9C16E8F51BC18AEB00A6B3C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9C16E8F71BC18AEB00A6B3C9 /* tvOS-Application.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "tvOS-Application.xcconfig"; sourceTree = "<group>"; };
+		9C16E8F81BC18AEB00A6B3C9 /* tvOS-Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "tvOS-Base.xcconfig"; sourceTree = "<group>"; };
+		9C16E8F91BC18AEB00A6B3C9 /* tvOS-Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "tvOS-Framework.xcconfig"; sourceTree = "<group>"; };
+		9C16E8FA1BC18AEB00A6B3C9 /* tvOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "tvOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		9C16E8FC1BC18AEB00A6B3C9 /* watchOS-Application.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "watchOS-Application.xcconfig"; sourceTree = "<group>"; };
+		9C16E8FD1BC18AEB00A6B3C9 /* watchOS-Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "watchOS-Base.xcconfig"; sourceTree = "<group>"; };
+		9C16E8FE1BC18AEB00A6B3C9 /* watchOS-Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "watchOS-Framework.xcconfig"; sourceTree = "<group>"; };
+		9C16E8FF1BC18AEB00A6B3C9 /* watchOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "watchOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C16E8BB1BC17BAE00A6B3C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C16E8C61BC17BAE00A6B3C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C16E8CA1BC17BAE00A6B3C9 /* Transmogrify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C16E8B51BC17BAE00A6B3C9 = {
+			isa = PBXGroup;
+			children = (
+				9C16E8C11BC17BAE00A6B3C9 /* Transmogrify */,
+				9C16E8CD1BC17BAE00A6B3C9 /* TransmogrifyTests */,
+				9C16E8DB1BC18AEB00A6B3C9 /* Configurations */,
+				9C16E8C01BC17BAE00A6B3C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C16E8C01BC17BAE00A6B3C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8BF1BC17BAE00A6B3C9 /* Transmogrify.framework */,
+				9C16E8C91BC17BAE00A6B3C9 /* TransmogrifyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C16E8C11BC17BAE00A6B3C9 /* Transmogrify */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8D91BC1827400A6B3C9 /* ValueTransformer.swift */,
+				9C16E8C41BC17BAE00A6B3C9 /* Info.plist */,
+			);
+			path = Transmogrify;
+			sourceTree = "<group>";
+		};
+		9C16E8CD1BC17BAE00A6B3C9 /* TransmogrifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8CE1BC17BAE00A6B3C9 /* TransmogrifyTests.swift */,
+				9C16E8D01BC17BAE00A6B3C9 /* Info.plist */,
+			);
+			path = TransmogrifyTests;
+			sourceTree = "<group>";
+		};
+		9C16E8DB1BC18AEB00A6B3C9 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8DC1BC18AEB00A6B3C9 /* .gitignore */,
+				9C16E8DD1BC18AEB00A6B3C9 /* Base */,
+				9C16E8E81BC18AEB00A6B3C9 /* Carthage */,
+				9C16E8EA1BC18AEB00A6B3C9 /* iOS */,
+				9C16E8EF1BC18AEB00A6B3C9 /* Mac OS X */,
+				9C16E8F51BC18AEB00A6B3C9 /* README.md */,
+				9C16E8F61BC18AEB00A6B3C9 /* tvOS */,
+				9C16E8FB1BC18AEB00A6B3C9 /* watchOS */,
+			);
+			name = Configurations;
+			path = Carthage/Checkouts/xcconfigs;
+			sourceTree = "<group>";
+		};
+		9C16E8DD1BC18AEB00A6B3C9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8DE1BC18AEB00A6B3C9 /* Common.xcconfig */,
+				9C16E8DF1BC18AEB00A6B3C9 /* Configurations */,
+				9C16E8E41BC18AEB00A6B3C9 /* Targets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9C16E8DF1BC18AEB00A6B3C9 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8E01BC18AEB00A6B3C9 /* Debug.xcconfig */,
+				9C16E8E11BC18AEB00A6B3C9 /* Profile.xcconfig */,
+				9C16E8E21BC18AEB00A6B3C9 /* Release.xcconfig */,
+				9C16E8E31BC18AEB00A6B3C9 /* Test.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		9C16E8E41BC18AEB00A6B3C9 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8E51BC18AEB00A6B3C9 /* Application.xcconfig */,
+				9C16E8E61BC18AEB00A6B3C9 /* Framework.xcconfig */,
+				9C16E8E71BC18AEB00A6B3C9 /* StaticLibrary.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		9C16E8E81BC18AEB00A6B3C9 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8E91BC18AEB00A6B3C9 /* Build */,
+			);
+			path = Carthage;
+			sourceTree = "<group>";
+		};
+		9C16E8E91BC18AEB00A6B3C9 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Build;
+			sourceTree = "<group>";
+		};
+		9C16E8EA1BC18AEB00A6B3C9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8EB1BC18AEB00A6B3C9 /* iOS-Application.xcconfig */,
+				9C16E8EC1BC18AEB00A6B3C9 /* iOS-Base.xcconfig */,
+				9C16E8ED1BC18AEB00A6B3C9 /* iOS-Framework.xcconfig */,
+				9C16E8EE1BC18AEB00A6B3C9 /* iOS-StaticLibrary.xcconfig */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		9C16E8EF1BC18AEB00A6B3C9 /* Mac OS X */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8F01BC18AEB00A6B3C9 /* Mac-Application.xcconfig */,
+				9C16E8F11BC18AEB00A6B3C9 /* Mac-Base.xcconfig */,
+				9C16E8F21BC18AEB00A6B3C9 /* Mac-DynamicLibrary.xcconfig */,
+				9C16E8F31BC18AEB00A6B3C9 /* Mac-Framework.xcconfig */,
+				9C16E8F41BC18AEB00A6B3C9 /* Mac-StaticLibrary.xcconfig */,
+			);
+			path = "Mac OS X";
+			sourceTree = "<group>";
+		};
+		9C16E8F61BC18AEB00A6B3C9 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8F71BC18AEB00A6B3C9 /* tvOS-Application.xcconfig */,
+				9C16E8F81BC18AEB00A6B3C9 /* tvOS-Base.xcconfig */,
+				9C16E8F91BC18AEB00A6B3C9 /* tvOS-Framework.xcconfig */,
+				9C16E8FA1BC18AEB00A6B3C9 /* tvOS-StaticLibrary.xcconfig */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		9C16E8FB1BC18AEB00A6B3C9 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				9C16E8FC1BC18AEB00A6B3C9 /* watchOS-Application.xcconfig */,
+				9C16E8FD1BC18AEB00A6B3C9 /* watchOS-Base.xcconfig */,
+				9C16E8FE1BC18AEB00A6B3C9 /* watchOS-Framework.xcconfig */,
+				9C16E8FF1BC18AEB00A6B3C9 /* watchOS-StaticLibrary.xcconfig */,
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9C16E8BC1BC17BAE00A6B3C9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9C16E8BE1BC17BAE00A6B3C9 /* Transmogrify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C16E8D31BC17BAE00A6B3C9 /* Build configuration list for PBXNativeTarget "Transmogrify" */;
+			buildPhases = (
+				9C16E8BA1BC17BAE00A6B3C9 /* Sources */,
+				9C16E8BB1BC17BAE00A6B3C9 /* Frameworks */,
+				9C16E8BC1BC17BAE00A6B3C9 /* Headers */,
+				9C16E8BD1BC17BAE00A6B3C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Transmogrify;
+			productName = Transmogrify;
+			productReference = 9C16E8BF1BC17BAE00A6B3C9 /* Transmogrify.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C16E8C81BC17BAE00A6B3C9 /* TransmogrifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C16E8D61BC17BAE00A6B3C9 /* Build configuration list for PBXNativeTarget "TransmogrifyTests" */;
+			buildPhases = (
+				9C16E8C51BC17BAE00A6B3C9 /* Sources */,
+				9C16E8C61BC17BAE00A6B3C9 /* Frameworks */,
+				9C16E8C71BC17BAE00A6B3C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C16E8CC1BC17BAE00A6B3C9 /* PBXTargetDependency */,
+			);
+			name = TransmogrifyTests;
+			productName = TransmogrifyTests;
+			productReference = 9C16E8C91BC17BAE00A6B3C9 /* TransmogrifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C16E8B61BC17BAE00A6B3C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Aron Cedercrantz";
+				TargetAttributes = {
+					9C16E8BE1BC17BAE00A6B3C9 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					9C16E8C81BC17BAE00A6B3C9 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 9C16E8B91BC17BAE00A6B3C9 /* Build configuration list for PBXProject "Transmogrify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9C16E8B51BC17BAE00A6B3C9;
+			productRefGroup = 9C16E8C01BC17BAE00A6B3C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C16E8BE1BC17BAE00A6B3C9 /* Transmogrify */,
+				9C16E8C81BC17BAE00A6B3C9 /* TransmogrifyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C16E8BD1BC17BAE00A6B3C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C16E8C71BC17BAE00A6B3C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C16E8BA1BC17BAE00A6B3C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C16E8DA1BC1827400A6B3C9 /* ValueTransformer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C16E8C51BC17BAE00A6B3C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C16E8CF1BC17BAE00A6B3C9 /* TransmogrifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C16E8CC1BC17BAE00A6B3C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C16E8BE1BC17BAE00A6B3C9 /* Transmogrify */;
+			targetProxy = 9C16E8CB1BC17BAE00A6B3C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9C16E8D11BC17BAE00A6B3C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C16E8E01BC18AEB00A6B3C9 /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9C16E8D21BC17BAE00A6B3C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C16E8E21BC18AEB00A6B3C9 /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9C16E8D41BC17BAE00A6B3C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C16E8ED1BC18AEB00A6B3C9 /* iOS-Framework.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Transmogrify/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cedercrantz.Transmogrify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C16E8D51BC17BAE00A6B3C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C16E8ED1BC18AEB00A6B3C9 /* iOS-Framework.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Transmogrify/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cedercrantz.Transmogrify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9C16E8D71BC17BAE00A6B3C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C16E8EB1BC18AEB00A6B3C9 /* iOS-Application.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = TransmogrifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cedercrantz.TransmogrifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9C16E8D81BC17BAE00A6B3C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C16E8EB1BC18AEB00A6B3C9 /* iOS-Application.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = TransmogrifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cedercrantz.TransmogrifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C16E8B91BC17BAE00A6B3C9 /* Build configuration list for PBXProject "Transmogrify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C16E8D11BC17BAE00A6B3C9 /* Debug */,
+				9C16E8D21BC17BAE00A6B3C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C16E8D31BC17BAE00A6B3C9 /* Build configuration list for PBXNativeTarget "Transmogrify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C16E8D41BC17BAE00A6B3C9 /* Debug */,
+				9C16E8D51BC17BAE00A6B3C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9C16E8D61BC17BAE00A6B3C9 /* Build configuration list for PBXNativeTarget "TransmogrifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C16E8D71BC17BAE00A6B3C9 /* Debug */,
+				9C16E8D81BC17BAE00A6B3C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C16E8B61BC17BAE00A6B3C9 /* Project object */;
+}
