@@ -24,18 +24,17 @@ before_install:
 
   - gem update xcpretty xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
 
-  - carthage bootstrap --no-build
-  - carthage build --no-skip-current --configuration Debug
+  - carthage bootstrap
 script:
   - set -o pipefail
   - xcodebuild -version
 
   # Build and run tests
   - if [ $RUN_TESTS == "YES" ]; then
-    xcodebuild -project Transmogrify.xcproject -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c -f `xcpretty-travis-formatter`;
+    xcodebuild -project Transmogrify.xcproject -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO test | xcpretty -c -f `xcpretty-travis-formatter`;
     fi
 
   # Just build
   - if [ $RUN_TESTS == "NO" ]; then
-    xcodebuild -project Transmogrify.xcproject -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO | xcpretty -c -f `xcpretty-travis-formatter`;
+    xcodebuild -project Transmogrify.xcproject -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty -c -f `xcpretty-travis-formatter`;
     fi
