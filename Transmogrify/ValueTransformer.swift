@@ -71,19 +71,6 @@ public class ValueTransformer<A, B>: NSValueTransformer {
         return self.forwardTransformer(value: value)
     }
 
-    func test() {
-        let pathToComponentsTransformer = ValueTransformer<String, [String]>.forwardTransformer({
-            if let value = $0 {
-                return value.componentsSeparatedByString("/")
-            }
-            return nil
-        })
-
-
-        let pathComponents = pathToComponentsTransformer.transformedValue("foo/bar/baz")
-        print(pathComponents)
-    }
-
 }
 
 
@@ -103,6 +90,8 @@ public class ReversibleValueTransformer<A, B>: ValueTransformer<A, B> {
     }
 
     public func reverseTransformedValue(value: B?) -> A? {
+        // The explicit unwrap should be fine here as we assert during initialization that the
+        // `reverseTransformer` exists and we’re immutable.
         return self.reverseTransformer!(value: value)
     }
     
