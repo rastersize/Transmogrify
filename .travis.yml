@@ -22,7 +22,8 @@ before_install:
   - brew update
   - brew install carthage
 
-  - gem update xcpretty xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
+  - gem update xcpretty --no-rdoc --no-ri --no-document --quiet
+  - gem install xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
 
   - carthage bootstrap
 script:
