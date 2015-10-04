@@ -90,6 +90,8 @@ public class ReversibleValueTransformer<A, B>: ValueTransformer<A, B> {
     }
 
     public func reverseTransformedValue(value: B?) -> A? {
+        // The explicit unwrap should be fine here as we assert during initialization that the
+        // `reverseTransformer` exists and we’re immutable.
         return self.reverseTransformer!(value: value)
     }
     
