@@ -59,9 +59,9 @@ public class ValueTransformer<A, B>: NSValueTransformer {
 
     // MARK: - NSValueTransformer
 
-    public override class func transformedValueClass() -> AnyClass {
-        // We’d want to return `B.self` but I don’t know how to do that yet…
-        return NSObject.self
+    /// Returns the class of the value returned by the receiver for a forward transformation.
+    public class func transformedValueClass() -> B.Type {
+        return B.self
     }
 
     /// Returns a Boolean value that indicates whether the receiver can reverse a transformation.
