@@ -14,7 +14,9 @@ public class ValueTransformer<A, B>: NSValueTransformer {
 
     // MARK: - Value Transformers
 
+    /// The forward value transformer.
     private let forwardTransformer: ForwardTransformer
+    /// The reverse value transformer, optional.
     private let reverseTransformer: ReverseTransformer?
 
 
@@ -57,11 +59,12 @@ public class ValueTransformer<A, B>: NSValueTransformer {
 
     // MARK: - NSValueTransformer
 
-    public override class func transformedValueClass() -> AnyClass {
-        // We’d want to return `B.self` but I don’t know how to do that yet…
-        return NSObject.self
+    /// Returns the class of the value returned by the receiver for a forward transformation.
+    public class func transformedValueClass() -> B.Type {
+        return B.self
     }
 
+    /// Returns a Boolean value that indicates whether the receiver can reverse a transformation.
     public override class func allowsReverseTransformation() -> Bool {
         return false
     }
@@ -80,12 +83,22 @@ public class ValueTransformer<A, B>: NSValueTransformer {
 /// `allowsReverseTransformation` is a class function.
 public class ReversibleValueTransformer<A, B>: ValueTransformer<A, B> {
 
-    public required init(forwardTransformer: ForwardTransformer, reverseTransformer: ReverseTransformer?) {
-        assert(reverseTransformer != nil, "AlimentoCore.ReversibleValueTransformer requires the given _reverseBlock_ to have some value (i.e. it must not be `nil`).")
+    /// Initialize a newly allocated reversible value transformer with the given forward and
+    /// reverse value transformers.
+    ///
+    /// - Parameters:
+    ///   - forwardTransformer: A block used to perform a forward value transformation, that is
+    ///     from value type `A?` to `B?`.
+    ///   - reverseTransformer: A block used to perform a reverse value transformation, that is
+    ///     from value type `B?` to `A?`.
+    public required init(forwardTransformer: ForwardTransformer, reverseTransformer: ReverseTransformer) {
         super.init(forwardTransformer: forwardTransformer, reverseTransformer: reverseTransformer)
     }
 
-    public override class func allowsReverseTransformation() -> Bool {
+    /// Returns a Boolean value that indicates whether the receiver can reverse a transformation.
+    ///
+    /// This class always allows reversible transformation.
+    final public override class func allowsReverseTransformation() -> Bool {
         return true
     }
 
